@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de personagens</title>
+
+  <style>
+    body {
+      background: #080ce0;
+      color: white;
+      text-align: center;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .personagem {
+      background: #333;
+      padding: 10px;
+      border-radius: 10px;
+      width: 180px;
+      cursor: pointer;
+      background-color: rgb(51, 255, 0);
+    }
+
+    .personagem img {
+      width: 100%;
+      height: 330px;
+      border-radius: 10px;
+    }
+
+    #detalhes {
+      margin-top: 30px;
+      background: #333;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Galeria de Star Wars</h1>
+     <div class="galeria">
+
+    <div class="personagem" onclick="mostrar('Anakin Skywalker', 'Jedi poderoso que virou Darth Vader.')">
+          <h2>Anakin</h2>
+      <img src="Anakin skywalker.webp">
+    </div>
+
+    <div class="personagem" onclick="mostrar('Obi-Wan Kenobi', 'Mestre Jedi e mentor de Anakin.')">
+       <h2>Obi-Wan</h2>
+      <img src="obiwan.webp">
+    </div>
+
+    <div class="personagem" onclick="mostrar('Yoda', 'Mestre Jedi sábio e muito forte na Força.')">
+      <h2>Yoda</h2>
+      <img src="Yoda.webp">
+    </div>
+  </div>
+  <div id="detalhes">
+    Clique em um personagem para ver os detalhes.
+  </div>
+  <script>
+    function mostrar(nome, descricao) {
+      document.getElementById("detalhes").innerHTML =
+        "<h2>" + nome + "</h2><p>" + descricao + "</p>";
+    }
+  </script>
+    
+</body>
+</html>

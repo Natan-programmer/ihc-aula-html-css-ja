@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Geek</title>
+</head>
+<body>
+    <h1 style="color: green;">Perguntas Sobre Star Wars</h1>
+    
+    <p>Qual era a cor do sabre de luz de Anakin Skywalker </p>
+    <button onclick="resposta('errado','resultado1')">Verde</button>
+<button onclick="resposta('certo','resultado1')">Azul</button>
+<button onclick="resposta('errado','resultado1')">Roxo</button>
+
+<h1 id="resultado1"></h1>
+
+<script>
+  function resposta(valor,id) {
+    if (valor == "certo") {
+      document.getElementById(id).innerHTML = "Você acertou!";
+    } else {
+      document.getElementById(id).innerHTML = "Você errou!";
+    }
+  }
+</script>
+
+<p>Quem foi o mestre Jedi que treinou Obi wan Kenobi</p>
+<button onclick="resposta('certo', 'resultado2')">Qui-gon Jinn</button>
+<button onclick="resposta('errado', 'resultado2')">Yoda</button>
+<button onclick="resposta('errado', 'resultado2')">Mace Windu</button>
+
+<h1 id="resultado2"></h1>
+
+<p>De que cor é o jetpack de Boba Fett</p>
+<button onclick="resposta('errada', 'resultado3')">Preto</button>
+<button onclick="resposta('errado','resultado3')"> Cinza</button>
+<button onclick="resposta('certo','resultado3')"> Verde</button>
+
+<h1 id="resultado3"></h1>
+
+</body>
+</html>
